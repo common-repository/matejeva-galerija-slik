@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+<head profile="http://gmpg.org/xfn/1"> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="WordPress 2.5.1" /> <!-- leave this for stats please -->
+<meta name="geo.position" content="41.862192;12.380340" />
+<meta name="geo.placename" content="Rome" />
+<meta name="geo.region" content="IT-RM" />
+<meta name="ICBM" content="41.862192, 12.380340" />
+<meta name="DC.title" content="Mir in dobro! - blog brata Mateja" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://matej.nastran.net/feed/" />
+<link rel="alternate" type="text/xml" title="RSS .92" href="http://matej.nastran.net/feed/rss/" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://matej.nastran.net/feed/atom/" />
+<link rel="shortcut icon" href="/favicon.ico" >
+<meta name="microid" content="mailto+http:sha1:f5d4086e71588d509020844fb87eabe0892b2f01" />
+<link rel="pingback" href="http://matej.nastran.net/xmlrpc.php" />
+<link rel='archives' title='Maj 2008' href='http://matej.nastran.net/2008/05/' />
+<link rel='archives' title='April 2008' href='http://matej.nastran.net/2008/04/' />
+<link rel='archives' title='Marec 2008' href='http://matej.nastran.net/2008/03/' />
+<link rel='archives' title='Februar 2008' href='http://matej.nastran.net/2008/02/' />
+<link rel='archives' title='Januar 2008' href='http://matej.nastran.net/2008/01/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://matej.nastran.net/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://matej.nastran.net/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="Matej MAPS" />
+<meta name="keywords" content="duhovnik, matej nastran" />
+<title>Blog br. Mateja | Fotogalerija | {title}</title>
+<meta name="description" content="br. Matej Nastran blog, Mir in dobro!" />
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAeKUDc2xfok1A6IRo2EckYBRzg7IdqUZbrv-GyQ3tE_y3kwm0BhShfsWPvJ-UNLQLw_nTTQihHFI7rw" type="text/javascript"></script>
+		<style type="text/css">
+
+			v\:*
+			{
+			behavior:url(#default#VML);
+			}
+
+			html, body, #map
+			{               
+               width: 100%;
+               height: 100%;
+			}
+
+			body
+			{
+			margin-top: 0px;
+			margin-right: 0px;
+			margin-left: 0px;
+			margin-bottom: 0px;
+			font-family: Verdana, Arial, sans-serif;
+			font-weight: normal;
+			font-size: 11px;
+			}
+
+			#quicklinks
+			{
+			top: 3px;
+			left: 80px;
+			position: absolute;
+			background-color: white;
+			opacity: .6;
+			filter: alpha(opacity=60);
+			 -moz-border-radius: 8px;
+			border-radius: 8px;
+
+			color: #CC0000;
+			padding: 5px;
+			font-size: 18px;
+			font-weight: bold;
+			}
+
+			#quicklinks a
+			{
+				color: #CC0000;
+				text-decoration: none;
+			}
+			#quicklinks a:visited
+			{
+				color: #CC0000;
+				text-decoration: none;
+			}
+			#quicklinks a:hover
+			{
+				color: #CC0000;
+				text-decoration: underline;
+			}
+			
+			
+			#minimap {
+				position: absolute;
+				top: 50px;
+				left: 80px;
+				width:150px;
+				height:100px;
+				overflow:hidden;
+				background: white;
+				border: 1px  gray; 
+				opacity: .9;
+				filter: alpha(opacity=90);
+			}
+
+			select {
+			font-family: Verdana, Arial, sans-serif;
+			font-size: 12px;
+			font-weight: bold;
+			}
+
+			#infotitle
+			{
+			text-align: center;white-space: nowrap;
+			font-weight: bold;
+			padding-bottom: 10px;
+			font-size: 12px;
+			color: #CC0000;
+			}
+
+			#infodesc
+			{
+			float: left;white-space: nowrap;
+			padding-right: 5px;
+			}
+
+			#infoimg
+			{
+			text-align: center;white-space: nowrap;
+			}
+
+		</style>
+
+	</head>
+	<body>
+		<div id="map"></div>
+		<div id="minimap"></div>
+		
+		<div id="quicklinks">
+			<a href="/foto/">Fotogalerija</a> | {title2}
+		</div>
+		<script type="text/javascript">
+
+			//<![CDATA[
+
+			// check for compatibility
+			if (GBrowserIsCompatible()) {
+
+
+function flip_picture (obj){
+	var tmp = obj.src;
+	obj.src = obj.alt;
+	obj.alt = tmp;
+	map.checkResize();
+}
+			
+function resizeMap( map, points, zoom ) {
+  var minLong = 999;
+  var minLat = 999;
+  var maxLong = -999;
+  var maxLat = -999;
+  
+  // Get the current map width/height
+  var size = map.getSpanLatLng();
+  var mapWidth = size.width;
+  var mapHeight = size.height;
+  var baseWidth = mapWidth;
+  var baseHeight = mapHeight;
+  
+  // Figure out the elemental unit (depends on the size of the map)
+  // You will need to re-run resizeMap() if the size of the map changes.
+  if ( map.getZoomLevel() > 0 ) {
+    baseWidth /= Math.pow( 2, map.getZoomLevel() );
+    baseHeight /= Math.pow( 2, map.getZoomLevel() );
+  }
+  
+  // Find the max/min points
+  for ( var i = 0; i < points.length; i++ ) {
+    if ( points[i].x < minLong ) minLong = points[i].x;
+    if ( points[i].x > maxLong ) maxLong = points[i].x;
+    if ( points[i].y < minLat ) minLat = points[i].y;
+    if ( points[i].y > maxLat ) maxLat = points[i].y;
+  }
+  
+  // Find the optimal Width Zoom
+  var wZoom = 0;
+  var w = Math.abs( maxLong - minLong );
+  for ( var i = 1; i < 16; i++ ) {
+    if ( baseWidth > w ) break;
+    baseWidth *= 2;
+    wZoom = i;
+  }
+  
+  // Find the optimal Height Zoom
+  var hZoom = 0;
+  var h = Math.abs( maxLat - minLat );
+  for ( var i = 1; i < 16; i++ ) {
+    if ( baseHeight > h ) break;
+    baseHeight *= 2;
+    hZoom = i;
+  }
+  var fZoom = 1+ (wZoom > hZoom ? wZoom : hZoom);
+  if (zoom > 0)
+	fZoom = zoom;
+  
+  // Reposition
+  map.centerAndZoom(
+    new GPoint( ( minLong + maxLong ) / 2, ( minLat + maxLat ) / 2 ), fZoom
+  );
+}
+			
+			
+				// call the info window opener for the given index
+				function makeOpenerCaller(i) {
+					return function() { showMarkerInfo(i); };
+				}
+
+				// open an info window
+				function showMarkerInfo(i) {
+					markers[i].openInfoWindowHtml(infoHtmls[i]);
+				}
+
+				// create the map
+				var map = new GMap(document.getElementById("map"));
+				map.addControl(new GLargeMapControl());
+				map.addControl(new GMapTypeControl());
+				map.addControl(new GScaleControl());
+				map.addControl(new GOverviewMapControl()) ;
+				map.centerAndZoom(new GPoint({center}), 5);
+				map.addMapType({type});
+				map.setMapType({type});
+				
+				// create minimap
+				var minimap = new GMap(document.getElementById("minimap"));
+				minimap.centerAndZoom(new GPoint({center}), 16, G_NORMAL_MAP);
+				minimap.addControl(new GSmallZoomControl ());
+				minimap.addOverlay(new GMarker(new GPoint({center}), {clickable:false}));
+				
+
+				// add a polyline overlay
+				var points;
+				//points = new Array();
+				//points.push(new GPoint(-84.80557, 35.226));
+				{path}
+				//map.addOverlay(new GPolyline(points, "#FF0000", 8, .55));
+
+
+				var baseIcon = new GIcon();
+				baseIcon.shadow = "http://www.google.com/mapfiles/shadow50.png";
+				baseIcon.iconSize = new GSize(20, 34);
+				baseIcon.shadowSize = new GSize(37, 34);
+				baseIcon.iconAnchor = new GPoint(9, 34);
+				baseIcon.infoWindowAnchor = new GPoint(9, 2);
+				baseIcon.infoShadowAnchor = new GPoint(18, 25);
+
+				// add the markers
+				var photos = new Array();
+				var markers = new Array();
+				var infoHtmls = new Array();
+				var ppointsx = new Array ();
+				var ppointsy = new Array ();
+				
+				{points}
+
+				for (var i=0; i<{num};i++){
+						photos[i] = new GPoint(parseFloat(ppointsx[i]), parseFloat(ppointsy[i]));
+						//var letter = String.fromCharCode("A".charCodeAt(0) + i);
+						var letterIcon = new GIcon(baseIcon);
+						letterIcon.image = "http://matej.nastran.net/wp-content/plugins/galerija/markers/marker_" + (i+1) + ".png";
+						markers[i] = new GMarker(photos[i], {icon:letterIcon});
+						map.addOverlay(markers[i]);
+						GEvent.addListener(markers[i],'click',makeOpenerCaller(i));
+				}
+				resizeMap (map, photos, {zoom});
+				map.enableScrollWheelZoom();
+				map.enableDoubleClickZoom();
+				showMarkerInfo({selected});
+			}
+			else {
+				document.getElementById("quicklinks").innerHTML = "Vaš browser ne podpira Google Maps!"
+			}
+			//]]>
+
+		</script>
+	</body>
+</html>
